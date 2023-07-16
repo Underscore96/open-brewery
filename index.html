@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>open Brewery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Super Birrerie mondiali</h1>
-        <div>
-            <button onclick="previous()">previous</button>
-            <button onclick="next()">next</button>
-        </div>
+    <header class="header">
+        <h1>Super <span class="underlined underline-clip">Birrerie</span><br>Mondiali<span class="underlined underline-mask"></span><br><span class="underlined underline-overflow"></span></h1>
+        
     </header>
+
+
+    <div id="button-container">
+        <button class="button" onclick="previous()">previous</button>
+        <button class="button" onclick="next()">next</button>
+    </div>
+
+
+
+
+    <h2 id="breweries-container"></h2>
 </body>
 <script src="./services/db-service.js"></script>
 <script src="./main.js"></script>

@@ -4,14 +4,20 @@ let pageNumber = 1;
 DBService.getBreweries(pageNumber)
 .then(breweries => render(breweries))
 
-function render(breweries){
 
-    for (brewery of breweries) {
-        console.log(brewery.name)
-        
-    }
 
-}
+function render(breweries) {
+        const breweriesContainer = document.getElementById('breweries-container');
+        breweriesContainer.innerHTML = ''; // Clear the existing breweries
+      
+        breweries.forEach(brewery => {
+          const breweryElement = document.createElement('div');
+          breweryElement.textContent = brewery.name;
+          breweriesContainer.appendChild(breweryElement);
+        });
+     }
+
+
 
 
 function previous() {
