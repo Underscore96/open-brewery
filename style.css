@@ -8,6 +8,7 @@
 
 body {
   margin: 0;
+  background-image: url('services/pics/beer.jpg');
 }
 
 
@@ -146,11 +147,46 @@ h1 {
 
 
   #breweries-container {
+    background-color: rgb(250, 235, 215);
+    background-position-x: center 20cm;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px; /* Adjust the margin as needed */
+
+ 
   }
+
+
+
+  .brewery-card {
+    background-color: rgb(34, 54, 112); /* Set the background color for the card */
+    padding: 10px; /* Add padding for spacing */
+    margin-bottom: 10px; /* Adjust the spacing between cards */
+    border-style: ridge;
+
+  }
+
+
+  .brewery-card:not(:last-child) {
+    margin-right: 20px;
+  }
+
+
+
+  .breweries-list {
+  width: 100%; /* Ensure the width spans the entire container */
+  height: auto; /* Allow the height to adjust based on content */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+  display: flex; /* Set the container as a flex container */
+  flex-wrap: nowrap; /* Prevent wrapping of brewery cards */
+}
+
+
+
+
+
+
 
 
 
